@@ -1,0 +1,18 @@
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+  <tr>
+    <th>Office Name</th>
+    <th>External Id</th>
+    <th>Parent Office</th>
+    <th>Opened On</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let info of officeInfo">
+    <td>{{ info.name }}</td>
+    <td>{{ info.externalId }}</td>
+    <td>{{ info.nameDecorated }}</td>
+    <td>{{ info.openingDate.join('-') }}</td>
+  </tr>
+</tbody>
+</table>
